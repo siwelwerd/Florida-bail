@@ -172,7 +172,7 @@ for (d in as.list(seq(startDate,endDate,as.difftime(days(1)))))
   
   print(paste("There were", caseCount, "cases on", d))
   df <- df %>% add_row(date=d,cases=caseCount)
-  df %>% write.table(file="Hillsborough counts.csv",row.names=FALSE,quote=FALSE)
+  df %>% write.table(file=fileName,row.names=FALSE,quote=FALSE)
   
 }
 
